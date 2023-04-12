@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Restraunt Homepage</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class>
+    <header class="static">
+      <div class="container">
+        <a href="/" id="logo">
+          <img src="/campusbites.png">
+        </a>
+      </div>
+    </header>
+    <header>
+      <div class="logo">
+        <h1>Campus Bites</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="play" style="background-image:url(/webbackground.png)"></div>
+    <main>
+      <section class="hero">
+        <h2>Where you meet local</h2>
+        <p>Find the best restraunts for your needs</p>
+      </section>
+      <section class="restraunts">
+        <h2>Featured Restraunts</h2>
+        <div class="rstr-cards">
+          <img src="rstr1.jpg" alt="Restraunt 1">
+          <h3>Restraunt 1</h3>
+          <button>Details</button>
+        </div>
+        <div class="rstr-cards">
+          <img src="rstr2.jpg" alt="Restraunt 2">
+          <h3>Restraunt 2</h3>
+          <button>Details</button>
+        </div>
+        <div class="rstr-card">
+          <img src="rstr3.jpg" alt="Restraunt 3">
+          <h3>Restraunt 3</h3>
+          <button>Details</button>
+        </div>
+      </section>
+      <section>
+        <link href="reviewcss.css" rel="stylesheet" type="text.class">
+        <div class="comment-section">
+          <h2>Customer Reviews</h2>
+          <form>
+            <input type="text" placeholder="Name" id="name" required>
+            <textarea placeholder="Write your review here..." id="comment" required></textarea>
+            <button type="submit" onclick="addComment()">Submit</button>
+          </form>
+          <div id="comments">
+            <!-- comments will be added dynamically here -->
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Catalog 2023</p>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

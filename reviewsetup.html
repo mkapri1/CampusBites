@@ -1,0 +1,29 @@
+<div class="comment-section">
+  <h2>Customer Reviews</h2>
+  <form>
+    <input type="text" placeholder="Name" id="name" required>
+    <textarea placeholder="Write your review here..." id="comment" required></textarea>
+    <button type="submit" onclick="addComment()">Submit</button>
+  </form>
+  <div id="comments">
+    <!-- comments will show up here after added -->
+  </div>
+  <script>
+  function addComment() {
+    // inputs
+    var name = document.getElementById("name").value;
+    var comment = document.getElementById("comment").value;
+  
+    // create comment element
+    var commentElement = document.createElement("div");
+    commentElement.classList.add("comment");
+    commentElement.innerHTML = "<h3>" + name + "</h3><p>" + comment + "</p>";
+  
+    var commentsSection = document.getElementById("comments");
+    commentsSection.appendChild(commentElement);
+  
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+  }
+  </script>
+</div>

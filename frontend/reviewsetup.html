@@ -1,29 +1,107 @@
-<div class="comment-section">
-  <h2>Customer Reviews</h2>
-  <form>
-    <input type="text" placeholder="Name" id="name" required>
-    <textarea placeholder="Write your review here..." id="comment" required></textarea>
-    <button type="submit" onclick="addComment()">Submit</button>
-  </form>
-  <div id="comments">
-    <!-- comments will show up here after added -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Customer Reviews</title>
+  <style>
+    br {
+      display:block;
+      margin-bottom: 0em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Customer Reviews</h1>
+  
+  <div id="reviews">
+    <h2>Reviews for April 2023</h2>
+    <ul>
+      <li>5 stars</li>
+      <li>4 stars</li>
+      <li>3 stars</li>
+      <li>2 stars</li>
+      <li>1 stars</li>
+    </ul>
+    <p>Average rating: <span id="average">0</span> stars</p>
   </div>
+
+  <div id="new-review">
+    <h2>Add a review</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+      <br style="line-height:40px">
+      <label for="rating">Rating:</label>
+      <input type="number" id="rating" name="rating" min="1" max="5">
+      <br>
+      <label for="comment">Comment:</label>
+      <textarea id="comment" name="comment"></textarea>
+      <br>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script src="reviews.js"></script>
   <script>
-  function addComment() {
-    // inputs
-    var name = document.getElementById("name").value;
-    var comment = document.getElementById("comment").value;
-  
-    // create comment element
-    var commentElement = document.createElement("div");
-    commentElement.classList.add("comment");
-    commentElement.innerHTML = "<h3>" + name + "</h3><p>" + comment + "</p>";
-  
-    var commentsSection = document.getElementById("comments");
-    commentsSection.appendChild(commentElement);
-  
-    document.getElementById("name").value = "";
-    document.getElementById("comment").value = "";
-  }
+    function reviews(){
+            //Examples
+        let reviews = [
+            { name: "Carlos",rating: 4, comment: "Great products!" },
+            { name: "Carlos",rating: 5, comment: "I love it!" },
+            { name: "Carlos",rating: 3, comment: "Not bad" }
+        ];
+        
+        //Calculate Averages
+        let totalRating = 0;
+        reviews.forEach((review) => {
+            totalRating += review.rating;
+        });
+        const averageRating = totalRating / reviews.length;
+        
+        // Update the average rating in the HTML
+        const averageSpan = document.querySelector('#average');
+        averageSpan.textContent = averageRating.toFixed(1);
+        
+        // Display the existing reviews
+        const reviewsUL = document.querySelector('#reviews ul');
+        reviews.forEach((review) => {
+            const li = document.createElement('li');
+            li.textContent = `${review.rating} stars - ${review.comment}`;
+            reviewsUL.appendChild(li);
+        });
+        
+        // Refresh New Form Submission Input
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            
+            // Get the user's rating and comment
+            const ratingInput = document.querySelector('#rating');
+            const rating = parseInt(ratingInput.value);
+            const commentInput = document.querySelector('#comment');
+            const comment = commentInput.value;
+            
+            // Add the new review to the array
+            reviews.push({ rating: rating, comment: comment });
+            
+            // Create a new review element
+            const newReview = document.createElement('li');
+            newReview.textContent = `${rating} stars - ${comment}`;
+            
+            // Add the new review to the list
+            reviewsUL.appendChild(newReview);
+            
+            // Calculate the new average rating
+            const newTotalRating = totalRating + rating;
+            const newAverageRating = newTotalRating / reviews.length;
+            
+            // Update the average rating in the HTML
+            averageSpan.textContent = newAverageRating.toFixed(1);
+            
+            // Reset the form
+            ratingInput.value = '';
+            commentInput.value = '';
+        });
+        }
   </script>
-</div>
+</body>
+</html>

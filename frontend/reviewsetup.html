@@ -42,6 +42,7 @@
 
   <script src="reviews.js"></script>
   <script>
+<<<<<<< HEAD
     function reviews(){
             //Examples
         let reviews = [
@@ -102,6 +103,42 @@
             commentInput.value = '';
         });
         }
+=======
+  function addComment() {
+  // inputs
+  var name = document.getElementById("name").value;
+  var comment = document.getElementById("comment").value;
+
+  // create comment element
+  var commentElement = document.createElement("div");
+  commentElement.classList.add("comment");
+  commentElement.innerHTML = "<h3>" + name + "</h3><p>" + comment + "</p>";
+
+  var commentsSection = document.getElementById("comments");
+  commentsSection.appendChild(commentElement);
+
+  // save comment in localStorage
+  var comments = JSON.parse(localStorage.getItem("comments")) || [];
+  comments.push({ name: name, comment: comment });
+  localStorage.setItem("comments", JSON.stringify(comments));
+
+  document.getElementById("name").value = "";
+  document.getElementById("comment").value = "";
+}
+
+// retrieve comments from localStorage on page load
+window.onload = function() {
+  var comments = JSON.parse(localStorage.getItem("comments")) || [];
+  var commentsSection = document.getElementById("comments");
+  comments.forEach(function(comment) {
+    var commentElement = document.createElement("div");
+    commentElement.classList.add("comment");
+    commentElement.innerHTML = "<h3>" + comment.name + "</h3><p>" + comment.comment + "</p>";
+    commentsSection.appendChild(commentElement);
+  });
+};
+
+>>>>>>> 7bf4c65 (comment section)
   </script>
 </body>
 </html>

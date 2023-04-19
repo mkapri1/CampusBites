@@ -115,4 +115,88 @@ html {
     margin-right: 20px;
     margin-bottom: 20px
   }
+  #slideshow-container {
+    position: relative;
+    width: 30%; /* Adjust this to the desired width of the slideshow */
+    margin: 120px auto 0; /* Centers the slideshow horizontally */
+    height: 300px;
+    box-sizing: border-box; /* Includes padding and border in the element's total width */
+    padding: 30px; /* Adds padding around the slideshow */
+    border: 1px solid #ccc; /* Adds a border around the slideshow */
+    margin-top: 0%;
+  }
+  
+  #slideshow-container img {
+    position: absolute;
+    top: 50%; /* Positions the image 50% from the top of the slideshow container */
+    left: 50%; /* Positions the image 50% from the left of the slideshow container */
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%, -50%); /* Centers the image within the slideshow container */
+    max-width: 100%; /* Limits the width of the image to the width of the slideshow container */
+    height: auto; /* Automatically adjusts the height of the image to maintain aspect ratio */
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+  }
+  
+#slideshow-container img:first-child {
+    opacity: 1;
+}
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  grid-template-columns: repeat(2, 1fr); /* Display two cards per row */
+  grid-gap: 20px; /* Add some spacing between the cards */
+}
+.card {
+  display: inline-block;
+  width: 300px;
+  height: 400px;
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card h2 {
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
+.card p {
+  margin: 10px;
+  font-size: 1rem;
+}
+
+.card a {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.2s ease-in-out;
+}
+
+.card a:hover {
+  background-color: #ccc;
+}
+
+
   

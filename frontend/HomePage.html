@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Campus Bites</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  <link rel = "stylesheet" href =style.css>
+  </head>
+  <body>
+    <header id="siteHeader" class="site-header py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-9 col-md-3">
+                        <h4 class="m-0 p-0 mt-1 text-uppercase" style = "color: rgb(255, 255, 255);">Campus Bites</h4>
+                </div>
+                <div class="col-md-9 d-md-block d-none">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item"><a href="HomePage.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="aboutUs.html" class="nav-link text-dark active" aria-current="page">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br><br> 
+    <section>
+        <div id="slideshow-container">
+            <img src="phoking.jpeg">
+            <img src="mogotea.jpeg">
+            <img src="chickfila.jpeg">
+        </div>
+        <script>
+            function slideshow() {
+            var container = document.getElementById("slideshow-container");
+            var images = container.getElementsByTagName("img");
+            var i;
+
+            for (i = 0; i < images.length; i++) {
+                images[i].style.opacity = 0;
+            }
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+            images[index].style.opacity = 1;
+        }
+        var index = 0;
+        setInterval(slideshow, 2000);
+    </script>  
+    </section>
+    <div class="card-grid">
+        <div class="card">
+          <img src="mr hibachi.jpeg" alt="Card 1">
+          <h2>Restaurant 1</h2>
+          <p>Mr. Hibachi</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="card">
+          <img src="phoking.jpeg" alt="Card 2">
+          <h2>Restaurant 2</h2>
+          <p>Pho King Express</p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="card">
+            <img src="sensational.jpeg" alt="Card 3">
+            <h2>Restaurant 3</h2>
+            <p>Sensational Subs</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div class="card">
+            <img src="chickfila.jpeg" alt="Card 4">
+            <h2>Restaurant 4</h2>
+            <p>Chick-Fila</p>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <img src="mogotea.jpeg" alt="Card 5">
+            <h2>Restaurant 5</h2>
+            <p>Mogo Tea</p>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <img src="mogotea.jpeg" alt="Card 6">
+            <h2>Restaurant 4</h2>
+            <p> Mogo Tea</p>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <img src="sensational.jpeg" alt="Card 7">
+            <h2>Restaurant 2</h2>
+            <p>Sensational Subs</p>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <img src="sensational.jpeg" alt="Card 8">
+            <h2>Restaurant 2</h2>
+            <p>Sensational Subs</p>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <img src="sensational.jpeg" alt="Card 9">
+            <h2>Restaurant 2</h2>
+            <p>Sensational Subs</p>
+            <a href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <img src="sensational.jpeg" alt="Card 10">
+            <h2>Restaurant 2</h2>
+            <p>Sensational Subs</p>
+            <a href="#">Learn More</a>
+          </div>
+          <button class="load-more-button">Load More</button>
+      </div>
+      <script>
+            const cardGrid = document.querySelector('.card-grid');
+            const loadMoreButton = document.querySelector('.load-more-button');
+            const cardsPerLoad = 2;
+            let currentCardIndex = 3;
+
+            // Show only the first 3 cards on page load
+            const cards = document.querySelectorAll('.card');
+            for (let i = 0; i < 10; i++) {
+            if (i < 3) {
+                cards[i].style.display = 'block';
+            } else {
+                cards[i].style.display = 'none';
+            }
+            }
+
+            loadMoreButton.addEventListener('click', () => {
+            // Show the next set of cards
+            for (let i = currentCardIndex; i < currentCardIndex + cardsPerLoad && i < 10; i++) {
+                cards[i].style.display = 'block';
+            }
+            
+            // Update the current card index
+            currentCardIndex += cardsPerLoad;
+            
+            // Hide the "Load More" button if there are no more cards to load
+            if (currentCardIndex >= 10) {
+                loadMoreButton.style.display = 'none';
+            }
+            });
+
+      </script>
+    <section>
+       
+    </section>
+    
+  </body>
+</html>

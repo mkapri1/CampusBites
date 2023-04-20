@@ -59,6 +59,16 @@ html {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 1px;
   }
+  h2 {
+    font-size: xx-large;
+    color: rgb(76, 76, 76);
+    font-style: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 1px;
+  }
+  p{
+    line-height: 1.5;
+  }
   
   
   .box{

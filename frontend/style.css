@@ -27,7 +27,7 @@ html {
   }
   
   .header-nav a {
-    color: rgb(8, 0, 0);
+    color: rgb(243, 241, 241);
     text-decoration: none;
     font-size: x-large;
   }
@@ -54,9 +54,10 @@ html {
   
   h1 {
     font-size: xx-large;
-    color: rgb(8, 0, 0);
+    color: rgb(249, 246, 246);
     font-style: normal;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 1px;
   }
   
   

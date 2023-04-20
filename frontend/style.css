@@ -2,6 +2,64 @@ html {
     height: 100%;
     width: 100%;
   }
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  .header-nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000000;
+  }
+  
+  .header-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .header-nav li {
+    margin-left: 20px;
+  }
+  
+  .header-nav a {
+    color: rgb(8, 0, 0);
+    text-decoration: none;
+    font-size: x-large;
+  }
+  
+  
+  .nav {
+    margin-right: 10px;
+  }
+  
+  header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 400px; /* adjust the height according to your image */
+    display: flex;
+    align-items: center;
+    height: 800px;
+  }
+  
+  .container {
+    max-width: 800px; /* adjust the width according to your preference */
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: xx-large;
+    color: rgb(8, 0, 0);
+    font-style: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  
   .box{
   width: 960px;
   height: 400px;
@@ -117,7 +175,7 @@ html {
   }
   #slideshow-container {
     position: relative;
-    width: 30%; /* Adjust this to the desired width of the slideshow */
+    width: 70%; /* Adjust this to the desired width of the slideshow */
     margin: 120px auto 0; /* Centers the slideshow horizontally */
     height: 300px;
     box-sizing: border-box; /* Includes padding and border in the element's total width */

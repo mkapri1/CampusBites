@@ -9,64 +9,37 @@
   <link rel = "stylesheet" href =style.css>
   </head>
   <body>
-    <header id="siteHeader" class="site-header py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-9 col-md-3">
-                        <h4 class="m-0 p-0 mt-1 text-uppercase" style = "color: rgb(255, 255, 255);">Campus Bites</h4>
-                </div>
-                <div class="col-md-9 d-md-block d-none">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item"><a href="HomePage.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="aboutUs.html" class="nav-link text-dark active" aria-current="page">About Us</a></li>
-                    </ul>
-                </div>
-            </div>
+    <header style="background-image: url('bg.jpeg');">
+      <div class="container header-container">
+        <div class="logo">
+          <img src="campusbites.png" alt="Logo" style="float:left; height: 80px;">
         </div>
+        <nav class="header-nav">
+          <ul>
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+          </ul>
+        </nav>
+        <h1>Welcome to Campus Bites: Your next stop to discover places around campus</h1>
+      </div>
     </header>
-    <br><br> 
-    <section>
-        <div id="slideshow-container">
-            <img src="phoking.jpeg">
-            <img src="mogotea.jpeg">
-            <img src="chickfila.jpeg">
-        </div>
-        <script>
-            function slideshow() {
-            var container = document.getElementById("slideshow-container");
-            var images = container.getElementsByTagName("img");
-            var i;
-
-            for (i = 0; i < images.length; i++) {
-                images[i].style.opacity = 0;
-            }
-            index++;
-            if (index >= images.length) {
-                index = 0;
-            }
-            images[index].style.opacity = 1;
-        }
-        var index = 0;
-        setInterval(slideshow, 2000);
-    </script>  
-    </section>
     <div class="card-grid">
         <div class="card">
           <img src="mr hibachi.jpeg" alt="Card 1">
-          <h2>Restaurant 1</h2>
-          <p>Mr. Hibachi</p>
+          <h2>Mr. Hibachi</h2>
+          <p>Fond of Asian cuisine? Check them out for some great flavours!</p>
           <a href="#">Learn More</a>
         </div>
         <div class="card">
           <img src="phoking.jpeg" alt="Card 2">
-          <h2>Restaurant 2</h2>
-          <p>Pho King Express</p>
+          <h2>Pho King</h2>
+          <p> Famous for its vietnamese food, and boba!</p>
           <a href="#">Learn More</a>
         </div>
         <div class="card">
             <img src="sensational.jpeg" alt="Card 3">
-            <h2>Restaurant 3</h2>
-            <p>Sensational Subs</p>
+            <h2>Sensational Subs</h2>
+            <p> Bored of Subway? Try some sensational!</p>
             <a href="#">Learn More</a>
         </div>
         <div class="card">

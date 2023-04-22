@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+  <style>
+    #map {
+      height: 400px;
+      width: 100%;
+      position: absolute;
+    }
+  </style>
   <head>
     <title>Campus Bites</title>
     <meta charset="utf-8">
@@ -8,9 +15,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
   <link rel = "stylesheet" href =style.css>
   </head>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1vWNdPaZp9IMqqc2WttKU6rjgwnddiLo&callback=Function.prototype"></script>
+ 
   <body>
     <header id="siteHeader" class="site-header py-3">
-        <div class="container">
+        <div class="container" >
             <div class="row">
                 <div class="col-9 col-md-3">
                     <a href="index.html" class="text-dark text-decoration-none">
@@ -43,8 +52,26 @@
     <br><br> 
     <section>
         <div class = "headings">
-            <h1 align = "center"> Name of the restaurant</h1>
+            <h1 align = "center" style:"color:black;"> Name of the restaurant</h1>
         </div>
+    </section>
+    
+    <section>
+      <div class="slideshow-container-rp" style ="margin-left:45% ; margin-top:5%">
+        
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 2</div>
+          <div class="text">Caption Text</div>
+        </div>
+      
+        <div>
+          <div class="numbertext">2 / 2</div>
+          <div class="text">Caption Two</div>
+        </div>
+        <img class="mySlides" src="mtfront.jpg" alt="front">
+        <img class="mySlides" src="mtmenu.jpg" alt="menu">
+       
+      </div>
     </section>
     <section>
         <div class="box2" align = "center">
@@ -59,7 +86,10 @@
     <section class="map">
       <div class="box1">
         <h2>Google Map</h2>
-        <div id="map"></div>
+        <body>
+          <div id="map"></div>
+          <script src="script.js"></script>
+        </body>
       </div>
     </section>
     <section class="reviews">

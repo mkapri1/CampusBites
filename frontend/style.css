@@ -267,5 +267,16 @@ html {
   background-color: #ccc;
 }
 
+#slideshow-container-rp {
+  position: relative;
+  max-width: 1000px; /* Adjust this to the desired width of the slideshow */
+  margin: 120px auto 0; /* Centers the slideshow horizontally */
+  max-height: 300px;
+  box-sizing: border-box; /* Includes padding and border in the element's total width */
+  padding: 30px; /* Adds padding around the slideshow */
+  border: 1px solid #ccc; /* Adds a border around the slideshow */
+  margin-top: 0%;
+}
+
 
   

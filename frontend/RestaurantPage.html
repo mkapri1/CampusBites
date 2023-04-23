@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
   <link rel = "stylesheet" href =style.css>
   </head>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1vWNdPaZp9IMqqc2WttKU6rjgwnddiLo"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1vWNdPaZp9IMqqc2WttKU6rjgwnddiLo&callback=Function.prototype"></script>
   <script src = "script.js"></script>
   <body>
      <section>
       <div class="container header-container">
         <div class="logo">
-          <img src="images/campusbites.png" alt="Logo" style="float:left; height: 80px;">
+          <img src="campusbites.png" alt="Logo" style="float:left; height: 80px;">
         </div>
         <nav class="header-nav">
           <ul>
@@ -55,14 +55,14 @@
     function showSlides() {
         var i;
         var slides = document.getElementsByClassName("mySlides");
-        for (i = 1; i < slides.length; i++) {
+        for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
         }
         slideIndex++;
         if (slideIndex > slides.length) {
         slideIndex = 1;
         }
-        slides[slideIndex - 1].style.display = "block";
+        slides[slideIndex-1].style.display = "block";
         setTimeout(showSlides, 3000); 
       }
     </script>
@@ -74,10 +74,11 @@
         <p> Want to grab some bubble tea or boba? Try Moge Tee which is located right near the campus! Möge Tee USA Franchise has built a strong foundation in the U.S. market. Their goal is to bring the Asian bubble tea phenomenon to a larger fan base. They want their “New-Style Tea” to break cultural boundaries and change perceptions about a beverage traditionally consumed by the older generation. Their products strive to be accessible to all communities across all demographics.</p>
       </div>
     </section>
-    <section>
-      <div class="box2">
+    <section class="map">
+      <div class="box2" onload="initMap()">
         <h3>Google Map</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3317.180291218835!2d-84.39199942431631!3d33.75600667326997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f503871e9448ef%3A0x6612fa7758ca8d30!2s68%20Broad%20St%20NW%2C%20Atlanta%2C%20GA%2030303!5e0!3m2!1sen!2sus!4v1682289925417!5m2!1sen!2sus" width="820" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div id="map"></div>
+          <script src="script.js"></script>
       </div>
     </section>
     <section class="reviews">

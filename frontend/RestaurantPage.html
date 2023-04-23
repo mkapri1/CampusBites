@@ -47,16 +47,34 @@
         </div>
     </section>
     
-   <section>
-  <div class="slideshow-container-rp">
-    <div class="mySlides">
-      <img src="mogotee2.jpeg" alt="front">
-    </div>
-    <div class="mySlides">
-      <img src="mogotea.jpeg" alt="menu">
-    </div>
-  </div>
-</section>
+    <section>
+      <div class="slideshow-container-rp">
+        <div class="mySlides">
+          <img src="mogotea.jpeg" alt="front">
+        </div>
+        <div class="mySlides">
+          <img src="mogotee2.jpeg" alt="menu">
+        </div>
+      </div>
+    <script>
+    var slideIndex = 1;
+    showSlides();
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 1; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+        slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+      }
+    </script>
+    </section>
+    
     <section class="description">
       <div class="box1">
         <h3>Description</h3>

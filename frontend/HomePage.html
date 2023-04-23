@@ -29,94 +29,59 @@
         <div class="card">
           <img src="phoking.jpeg" alt="Card 2">
           <h2>Pho King</h2>
-          <p> Famous for its vietnamese food, and boba!</p>
+          <p> Famous for its vietnamese food, and boba! Come try some pho here.</p>
           <a href="#">Learn More</a>
         </div>
         <div class="card">
             <img src="sensational.jpeg" alt="Card 3">
             <h2>Sensational Subs</h2>
-            <p> Bored of Subway? Try some sensational!</p>
+            <p> Bored of Subway? Try some sensational! Get free wifi if you dine in.</p>
             <a href="#">Learn More</a>
         </div>
         <div class="card">
             <img src="chickfila.jpeg" alt="Card 4">
-            <h2>Restaurant 4</h2>
-            <p>Chick-Fila</p>
+            <h2>Chick-Fila</h2>
+            <p>Want some quick lunch before class? What's better than Chick-Fila!</p>
             <a href="#">Learn More</a>
           </div>
           <div class="card">
-            <img src="mogotea.jpeg" alt="Card 5">
-            <h2>Restaurant 5</h2>
-            <p>Moge Tee</p>
+            <img src="mogotee2.jpeg" alt="Card 5">
+            <h2>Mogo Tee</h2>
+            <p>Try some delicious boba, or bubble tea here! Right on campus near aderhold.</p>
             <a href="RestaurantPage.html">Learn More</a>
           </div>
           <div class="card">
-            <img src="mogotea.jpeg" alt="Card 6">
-            <h2>Restaurant 4</h2>
-            <p> Mogo Tea</p>
+            <img src="pandaExpress.jpeg" alt="Card 6">
+            <h2>Panda Express</h2>
+            <p> </p>
             <a href="#">Learn More</a>
           </div>
           <div class="card">
-            <img src="sensational.jpeg" alt="Card 7">
-            <h2>Restaurant 2</h2>
-            <p>Sensational Subs</p>
+            <img src="anatolia.jpeg" alt="Card 7">
+            <h2>Anatolia Cafe</h2>
+            <p></p>
             <a href="#">Learn More</a>
           </div>
           <div class="card">
-            <img src="sensational.jpeg" alt="Card 8">
-            <h2>Restaurant 2</h2>
-            <p>Sensational Subs</p>
+            <img src="MrFriesMan.jpeg" alt="Card 8">
+            <h2>Mr. Fries Man</h2>
+            <p></p>
             <a href="#">Learn More</a>
           </div>
           <div class="card">
-            <img src="sensational.jpeg" alt="Card 9">
-            <h2>Restaurant 2</h2>
-            <p>Sensational Subs</p>
+            <img src="Taqueria.jpeg" alt="Card 9">
+            <h2>Taqueria on Broad</h2>
+            <p></p>
             <a href="#">Learn More</a>
           </div>
           <div class="card">
-            <img src="sensational.jpeg" alt="Card 10">
-            <h2>Restaurant 2</h2>
-            <p>Sensational Subs</p>
+            <img src="bigDave.jpeg" alt="Card 10">
+            <h2>Big Dave's Cheesesteaks</h2>
+            <p></p>
             <a href="#">Learn More</a>
           </div>
           <button class="load-more-button">Load More</button>
+          <script src = "script.js"></script>
       </div>
-      <script>
-            const cardGrid = document.querySelector('.card-grid');
-            const loadMoreButton = document.querySelector('.load-more-button');
-            const cardsPerLoad = 2;
-            let currentCardIndex = 3;
-
-            // Show only the first 3 cards on page load
-            const cards = document.querySelectorAll('.card');
-            for (let i = 0; i < 10; i++) {
-            if (i < 3) {
-                cards[i].style.display = 'block';
-            } else {
-                cards[i].style.display = 'none';
-            }
-            }
-
-            loadMoreButton.addEventListener('click', () => {
-            // Show the next set of cards
-            for (let i = currentCardIndex; i < currentCardIndex + cardsPerLoad && i < 10; i++) {
-                cards[i].style.display = 'block';
-            }
-            
-            // Update the current card index
-            currentCardIndex += cardsPerLoad;
-            
-            // Hide the "Load More" button if there are no more cards to load
-            if (currentCardIndex >= 10) {
-                loadMoreButton.style.display = 'none';
-            }
-            });
-
-      </script>
-    <section>
-       
-    </section>
-    
   </body>
 </html>

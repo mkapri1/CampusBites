@@ -1,12 +1,5 @@
 <!DOCTYPE html>
 <html>
-  <style>
-    #map {
-      height: 400px;
-      width: 100%;
-      position: absolute;
-    }
-  </style>
   <head>
     <title>Campus Bites</title>
     <meta charset="utf-8">
@@ -70,7 +63,7 @@
         slideIndex = 1;
         }
         slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 3000); // Change image every 3 seconds
+        setTimeout(showSlides, 3000); 
       }
     </script>
     </section>
@@ -82,12 +75,10 @@
       </div>
     </section>
     <section class="map">
-      <div class="box1" onload="initMap()">
+      <div class="box2" onload="initMap()">
         <h3>Google Map</h3>
-        <body>
           <div id="map"></div>
           <script src="script.js"></script>
-        </body>
       </div>
     </section>
     <section class="reviews">
@@ -102,7 +93,7 @@
           </head>
           <body>
             <h3>Customer Reviews</h3>
-            
+            <script src = "script.js"></script>
             <div id="reviews">
               <h2>Reviews for April 2023</h2>
               <ul>
@@ -130,105 +121,7 @@
                 <button type="submit">Submit</button>
               </form>
             </div>
-
-            <script src="reviews.js"></script>
-            <script>
-              function reviews(){
-                      //Examples
-                  let reviews = [
-                      { name: "Carlos",rating: 4, comment: "Great products!" },
-                      { name: "Carlos",rating: 5, comment: "I love it!" },
-                      { name: "Carlos",rating: 3, comment: "Not bad" }
-                  ];
-                  
-                  //Calculate Averages
-                  let totalRating = 0;
-                  reviews.forEach((review) => {
-                      totalRating += review.rating;
-                  });
-                  const averageRating = totalRating / reviews.length;
-                  
-                  // Update the average rating in the HTML
-                  const averageSpan = document.querySelector('#average');
-                  averageSpan.textContent = averageRating.toFixed(1);
-                  
-                  // Display the existing reviews
-                  const reviewsUL = document.querySelector('#reviews ul');
-                  reviews.forEach((review) => {
-                      const li = document.createElement('li');
-                      li.textContent = `${review.rating} stars - ${review.comment}`;
-                      reviewsUL.appendChild(li);
-                  });
-                  
-                  // Refresh New Form Submission Input
-                  const form = document.querySelector('form');
-                  form.addEventListener('submit', (event) => {
-                      event.preventDefault();
-                      
-                      // Get the user's rating and comment
-                      const ratingInput = document.querySelector('#rating');
-                      const rating = parseInt(ratingInput.value);
-                      const commentInput = document.querySelector('#comment');
-                      const comment = commentInput.value;
-                      
-                      // Add the new review to the array
-                      reviews.push({ rating: rating, comment: comment });
-                      
-                      // Create a new review element
-                      const newReview = document.createElement('li');
-                      newReview.textContent = `${rating} stars - ${comment}`;
-                      
-                      // Add the new review to the list
-                      reviewsUL.appendChild(newReview);
-                      
-                      // Calculate the new average rating
-                      const newTotalRating = totalRating + rating;
-                      const newAverageRating = newTotalRating / reviews.length;
-                      
-                      // Update the average rating in the HTML
-                      averageSpan.textContent = newAverageRating.toFixed(1);
-                      
-                      // Reset the form
-                      ratingInput.value = '';
-                      commentInput.value = '';
-                  });
-                  }
-
-            function addComment() {
-            // inputs
-            var name = document.getElementById("name").value;
-            var comment = document.getElementById("comment").value;
-
-            // create comment element
-            var commentElement = document.createElement("div");
-            commentElement.classList.add("comment");
-            commentElement.innerHTML = "<h3>" + name + "</h3><p>" + comment + "</p>";
-
-            var commentsSection = document.getElementById("comments");
-            commentsSection.appendChild(commentElement);
-
-            // save comment in localStorage
-            var comments = JSON.parse(localStorage.getItem("comments")) || [];
-            comments.push({ name: name, comment: comment });
-            localStorage.setItem("comments", JSON.stringify(comments));
-
-            document.getElementById("name").value = "";
-            document.getElementById("comment").value = "";
-          }
-
-          // retrieve comments from localStorage on page load
-          window.onload = function() {
-            var comments = JSON.parse(localStorage.getItem("comments")) || [];
-            var commentsSection = document.getElementById("comments");
-            comments.forEach(function(comment) {
-              var commentElement = document.createElement("div");
-              commentElement.classList.add("comment");
-              commentElement.innerHTML = "<h3>" + comment.name + "</h3><p>" + comment.comment + "</p>";
-              commentsSection.appendChild(commentElement);
-            });
-          };
-          </script>
-                </div>
+          </div>
     </section>
   </body>
 </html>

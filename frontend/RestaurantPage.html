@@ -16,30 +16,21 @@
   <link rel = "stylesheet" href =style.css>
   </head>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1vWNdPaZp9IMqqc2WttKU6rjgwnddiLo&callback=Function.prototype"></script>
- 
+  <script src = "script.js"></script>
   <body>
-    <header id="siteHeader" class="site-header py-3">
-        <div class="container" >
-            <div class="row">
-                <div class="col-9 col-md-3">
-                    <a href="index.html" class="text-dark text-decoration-none">
-                        <h4 class="m-0 p-0 mt-1 text-uppercase" style = "color: rgb(248, 248, 252);">Campus Bites</h4>
-                    </a>
-                </div>
-                <div class="col-md-9 d-md-block d-none">
-                    <ul class="nav justify-content-end">
-                        <li class="nav-item"><a href="HomePage.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="AboutUs.html" class="nav-link text-dark active" aria-current="page">About Us</a></li>
-                    </ul>
-                </div>
-                <div class="col-3 d-md-none text-end">
-                    <a href="#" class="btn btn-outline-primary">
-                        <i class="bi bi-list"></i>
-                    </a>
-                </div>
-            </div>
+     <section>
+      <div class="container header-container">
+        <div class="logo">
+          <img src="campusbites.png" alt="Logo" style="float:left; height: 80px;">
         </div>
-    </header>
+        <nav class="header-nav">
+          <ul>
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+          </ul>
+        </nav>
+     </section>
+       
     <section id="pageBanner" class="page-banner bg-dark py-4 py-md-5">
         <div class="container">
             <div class="row">
@@ -52,40 +43,29 @@
     <br><br> 
     <section>
         <div class = "headings">
-            <h1 align = "center" style:"color:black;"> Name of the restaurant</h1>
+            <h3 align = "center"> Moge Tee </h3>
         </div>
     </section>
     
-    <section>
-      <div class="slideshow-container-rp" style ="margin-left:45% ; margin-top:5%">
-        
-        <div class="mySlides fade">
-          <div class="numbertext">1 / 2</div>
-          <div class="text">Caption Text</div>
-        </div>
-      
-        <div>
-          <div class="numbertext">2 / 2</div>
-          <div class="text">Caption Two</div>
-        </div>
-        <img class="mySlides" src="mtfront.jpg" alt="front">
-        <img class="mySlides" src="mtmenu.jpg" alt="menu">
-       
-      </div>
-    </section>
-    <section>
-        <div class="box2" align = "center">
+   <section>
+  <div class="slideshow-container-rp">
+    <div class="mySlides">
+      <img src="mogotee2.jpeg" alt="front">
     </div>
-    </section>
+    <div class="mySlides">
+      <img src="mogotea.jpeg" alt="menu">
+    </div>
+  </div>
+</section>
     <section class="description">
       <div class="box1">
-        <h2>Description</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt bibendum quam, eu fringilla orci bibendum a. Fusce ac lorem ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis rhoncus lacinia fermentum. Sed dictum purus id dui aliquam, sed commodo lorem mollis. Fusce lobortis tellus vel risus commodo, a lacinia velit faucibus. Nam pretium auctor diam, vel tincidunt turpis semper vitae.</p>
+        <h3>Description</h3>
+        <p> Want to grab some bubble tea or boba? Try Moge Tee which is located right near the campus! Möge Tee USA Franchise has built a strong foundation in the U.S. market. Their goal is to bring the Asian bubble tea phenomenon to a larger fan base. They want their “New-Style Tea” to break cultural boundaries and change perceptions about a beverage traditionally consumed by the older generation. Their products strive to be accessible to all communities across all demographics.</p>
       </div>
     </section>
     <section class="map">
-      <div class="box1">
-        <h2>Google Map</h2>
+      <div class="box1" onload="initMap()">
+        <h3>Google Map</h3>
         <body>
           <div id="map"></div>
           <script src="script.js"></script>
@@ -93,17 +73,144 @@
       </div>
     </section>
     <section class="reviews">
-      <div class="box1">
-        <h2>Reviews</h2>
-        <div class="profile">
-          <img src="profile-pic.jpg" alt="">
-          <p>John Doe</p>
-        </div>
-        <form>
-          <textarea placeholder="Write a review..."></textarea>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
+      <div class="box3">
+                  <title>Customer Reviews</title>
+            <style>
+              br {
+                display:block;
+                margin-bottom: 0em;
+              }
+            </style>
+          </head>
+          <body>
+            <h3>Customer Reviews</h3>
+            
+            <div id="reviews">
+              <h2>Reviews for April 2023</h2>
+              <ul>
+                <li>5 stars</li>
+                <li>4 stars</li>
+                <li>3 stars</li>
+                <li>2 stars</li>
+                <li>1 stars</li>
+              </ul>
+              <p>Average rating: <span id="average">0</span> stars</p>
+            </div>
+
+            <div id="new-review">
+              <h2>Add a review</h2>
+              <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <br style="line-height:40px">
+                <label for="rating">Rating:</label>
+                <input type="number" id="rating" name="rating" min="1" max="5">
+                <br>
+                <label for="comment">Comment:</label>
+                <textarea id="comment" name="comment"></textarea>
+                <br>
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+
+            <script src="reviews.js"></script>
+            <script>
+              function reviews(){
+                      //Examples
+                  let reviews = [
+                      { name: "Carlos",rating: 4, comment: "Great products!" },
+                      { name: "Carlos",rating: 5, comment: "I love it!" },
+                      { name: "Carlos",rating: 3, comment: "Not bad" }
+                  ];
+                  
+                  //Calculate Averages
+                  let totalRating = 0;
+                  reviews.forEach((review) => {
+                      totalRating += review.rating;
+                  });
+                  const averageRating = totalRating / reviews.length;
+                  
+                  // Update the average rating in the HTML
+                  const averageSpan = document.querySelector('#average');
+                  averageSpan.textContent = averageRating.toFixed(1);
+                  
+                  // Display the existing reviews
+                  const reviewsUL = document.querySelector('#reviews ul');
+                  reviews.forEach((review) => {
+                      const li = document.createElement('li');
+                      li.textContent = `${review.rating} stars - ${review.comment}`;
+                      reviewsUL.appendChild(li);
+                  });
+                  
+                  // Refresh New Form Submission Input
+                  const form = document.querySelector('form');
+                  form.addEventListener('submit', (event) => {
+                      event.preventDefault();
+                      
+                      // Get the user's rating and comment
+                      const ratingInput = document.querySelector('#rating');
+                      const rating = parseInt(ratingInput.value);
+                      const commentInput = document.querySelector('#comment');
+                      const comment = commentInput.value;
+                      
+                      // Add the new review to the array
+                      reviews.push({ rating: rating, comment: comment });
+                      
+                      // Create a new review element
+                      const newReview = document.createElement('li');
+                      newReview.textContent = `${rating} stars - ${comment}`;
+                      
+                      // Add the new review to the list
+                      reviewsUL.appendChild(newReview);
+                      
+                      // Calculate the new average rating
+                      const newTotalRating = totalRating + rating;
+                      const newAverageRating = newTotalRating / reviews.length;
+                      
+                      // Update the average rating in the HTML
+                      averageSpan.textContent = newAverageRating.toFixed(1);
+                      
+                      // Reset the form
+                      ratingInput.value = '';
+                      commentInput.value = '';
+                  });
+                  }
+
+            function addComment() {
+            // inputs
+            var name = document.getElementById("name").value;
+            var comment = document.getElementById("comment").value;
+
+            // create comment element
+            var commentElement = document.createElement("div");
+            commentElement.classList.add("comment");
+            commentElement.innerHTML = "<h3>" + name + "</h3><p>" + comment + "</p>";
+
+            var commentsSection = document.getElementById("comments");
+            commentsSection.appendChild(commentElement);
+
+            // save comment in localStorage
+            var comments = JSON.parse(localStorage.getItem("comments")) || [];
+            comments.push({ name: name, comment: comment });
+            localStorage.setItem("comments", JSON.stringify(comments));
+
+            document.getElementById("name").value = "";
+            document.getElementById("comment").value = "";
+          }
+
+          // retrieve comments from localStorage on page load
+          window.onload = function() {
+            var comments = JSON.parse(localStorage.getItem("comments")) || [];
+            var commentsSection = document.getElementById("comments");
+            comments.forEach(function(comment) {
+              var commentElement = document.createElement("div");
+              commentElement.classList.add("comment");
+              commentElement.innerHTML = "<h3>" + comment.name + "</h3><p>" + comment.comment + "</p>";
+              commentsSection.appendChild(commentElement);
+            });
+          };
+          </script>
+                </div>
     </section>
   </body>
 </html>

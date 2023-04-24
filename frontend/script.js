@@ -1,5 +1,3 @@
-
-
 function initMap() {
     var location = { lat: 33.755451, lng: -84.389352 }; // set the location to San Francisco
     var map = new google.maps.Map(document.getElementById("gmap"), {
@@ -17,7 +15,7 @@ showSlides();
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
-    for (i = 1; i < slides.length; i++) {
+    for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
     }
     slideIndex++;

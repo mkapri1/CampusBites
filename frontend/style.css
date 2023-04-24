@@ -258,6 +258,7 @@
   border-radius: 4px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  display: none;
 }
 
 .card img {
@@ -294,6 +295,20 @@
   background-color: #ccc;
 }
 
+.load-more-button{
+  background-color: #72afff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left:50%-5px;
+}
 .slideshow-container-rp {
   display: flex;
   justify-content: center;
@@ -356,6 +371,7 @@ button[type="submit"] {
   width: 100%;
   position: absolute;
 }
+
 
 
 

@@ -3,6 +3,7 @@
   <head>
     <title>Campus Bites</title>
   <link rel = "stylesheet" href =style.css>
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
   </head>
   <body>
     <header style="background-image: url('images/bg.jpeg');">
@@ -80,8 +81,17 @@
             <p></p>
             <a href="#">Learn More</a>
           </div>
-          <button class="load-more-button">Load More</button>
-          <script src = "script.js"></script>
+          
       </div>
+      <button class="load-more-button">Load More</button><br>
+          <script>
+            $(document).ready(function(){
+              $(".card").slice(0,4).fadeIn();
+              $(".load-more-button").click(function(){
+                $(".card").slice(0,10).fadeIn();
+                $(this).fadeOut();
+              });
+            });
+          </script>
   </body>
 </html>

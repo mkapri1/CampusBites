@@ -371,6 +371,29 @@ button[type="submit"] {
   width: 100%;
   position: absolute;
 }
+#review-section {
+  float: right;
+  margin-left: 20px;
+  width: 40%;
+}
+
+.review {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #72afff;
+}
+
+.review .name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.review .rating {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 10px;
+}
 
 
 

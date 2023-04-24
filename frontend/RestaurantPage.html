@@ -79,47 +79,64 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6634.360557153038!2d-84.389424!3d33.756007!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f503871e9448ef%3A0x6612fa7758ca8d30!2s68%20Broad%20St%20NW%2C%20Atlanta%2C%20GA%2030303!5e0!3m2!1sen!2sus!4v1682290170547!5m2!1sen!2sus" width="825" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
+    <style>
+      #review-section {
+        float: right;
+        margin-left: 20px;
+        width: 40%;
+      }
+    </style>
+    
     <section class="reviews">
       <div class="box3">
-                  <title>Customer Reviews</title>
-            <style>
-              br {
-                display:block;
-                margin-bottom: 0em;
-              }
-            </style>
-          </head>
-          <body>
-            <h3>Customer Reviews</h3>
-            <script src = "script.js"></script>
-            <div id="reviews">
-              <h2>Reviews for April 2023</h2>
-              <ul>
-                <li>5 stars</li>
-                <li>4 stars</li>
-                <li>3 stars</li>
-                <li>2 stars</li>
-                <li>1 stars</li>
-              </ul>
-              <p>Average rating: <span id="average">0</span> stars</p>
-            </div>
-
-            <div id="new-review">
-              <h2>Add a review</h2>
-              <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
-                <br style="line-height:40px">
-                <label for="rating">Rating:</label>
-                <input type="number" id="rating" name="rating" min="1" max="5">
-                <br>
-                <label for="comment">Comment:</label>
-                <textarea id="comment" name="comment"></textarea>
-                <br>
-                <button type="submit">Submit</button>
-              </form>
-            </div>
+        <title>Customer Reviews</title>
+        <h3>Customer Reviews</h3>
+        <div id="review-section">
+          <h4>Look what your peers think!</h4>
+          <div class="review">
+            <div class="name">John Doe</div>
+            <div class="rating">5 stars</div>
+            <div class="comment">Great restaurant for bubble tea,loved it!! Highly recommend to anyone.</div>
           </div>
+          <div class="review">
+            <div class="name">Jane Smith</div>
+            <div class="rating">3 stars</div>
+            <div class="comment"> Boba was good, but a bit overpriced in my opinion.</div>
+          </div>
+          <div class="review">
+            <div class="name"> Alex Wood</div>
+            <div class="rating">4 stars</div>
+            <div class="comment">Amazing for quick a snack, and drink! Definitely check it out!</div>
+          </div>
+        </div>
+        <div id="reviews">
+          <h2>Reviews for April 2023</h2>
+          <ul>
+            <li>5 stars</li>
+            <li>4 stars</li>
+            <li>3 stars</li>
+            <li>2 stars</li>
+            <li>1 stars</li>
+          </ul>
+          <p>Average rating: <span id="average">4</span> stars</p>
+        </div>
+        <div id="new-review">
+          <h2>Add a review</h2>
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <br>
+            <label for="rating">Rating:</label>
+            <input type="number" id="rating" name="rating" min="1" max="5">
+            <br>
+            <label for="comment">Comment:</label>
+            <textarea id="comment" name="comment"></textarea>
+            <br>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
     </section>
+    
   </body>
 </html>

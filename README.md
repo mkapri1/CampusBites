@@ -41,8 +41,6 @@ Campus Bites' unique review system encourages individuals to share their experie
 ## Team Contributions
 
 ````
-    Malika Kapri: Front-end, Backend
-    Abdul Fawy: Front-end, Backend
-    Ben Thompson:
-    Ryan Ferguson:
+    Malika Kapri: Front-end, Backend, Prototypes (Figma)
+    Abdul Fawy: Front-end, Backend, Prototypes (Figma)
 ````

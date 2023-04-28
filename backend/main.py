@@ -2,11 +2,14 @@ import pymysql
 from app import app
 from db_config import mysql
 from flask import jsonify
-from flask import flash, request
-
+from flask import Flask, request
 
 conn = mysql.connect()
 cur = conn.cursor(pymysql.cursors.DictCursor)
+
+@app.route('/')
+def hello_wordl():
+    return "<p>Hello World!</p>"
 
 @app.route('/reviews/review_text')
 def index():

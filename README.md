@@ -1,5 +1,5 @@
 # CampusBites
-## Web Programming Project
+
 
 <img src="frontend/images/campusbites.png" alt="Alt text" width="400"/>
 
